@@ -124,7 +124,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
             $str .= $key.'='.$value.'&';
         }
 
-        curl_setopt($ch, CURLOPT_URL, $this->testEndPoint);
+        curl_setopt($ch, CURLOPT_URL, $this->getEndpoint());
         curl_setopt($ch, CURLOPT_POSTFIELDS, $str);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
@@ -138,7 +138,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         $txn_id = $this->getParameter('RedirectionTxnID');
 
         //if(!empty($txn_id)) {
-            $url =  $this->testEndPoint.'?txnId='.$txn_id;
+            $url =  $this->getEndpoint().'?txnId='.$txn_id;
             $data['RedirectionTxnID']= $txn_id;
             return $this->response = new Response($this, $data, $url);
         //}
@@ -243,7 +243,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 
     protected function getEndpoint()
     {
-        return $this->getTestMode() ? $this->testEndPoint : $this->liveEndpoint;
+        return $this->getTestMode() ? $this->testEndPoint : $this->liveEndPoint;
     }
 
     public function getData()
