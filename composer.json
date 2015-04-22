@@ -1,7 +1,7 @@
 {
-    "name": "sinfini/omnipay-instamojo",
+    "name": "sinfini/omnipay-icici",
     "type": "library",
-    "description": "Instamojo (Raven) driver for the Omnipay PHP payment processing library",
+    "description": "Icici (Raven) driver for the Omnipay PHP payment processing library",
     "keywords": [
         "gateway",
         "merchant",
@@ -9,9 +9,9 @@
         "pay",
         "payment",
         "purchase",
-        "instamojo",
+        "Icici",
     ],
-    "homepage": "https://github.com/sinfini/omnipay-instamojo",
+    "homepage": "https://github.com/sinfini/omnipay-icici",
     "license": "MIT",
     "authors": [
         {
@@ -20,7 +20,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "Omnipay\\Instamojo\\" : "src/" }
+        "psr-0": { "Omnipay\\Icici\\" : "src/" }
     },
     "require": {
         "omnipay/common": "dev-master"
