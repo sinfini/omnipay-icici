@@ -1,7 +1,7 @@
 {
     "name": "sinfini/omnipay-icici",
     "type": "library",
-    "description": "Icici (Raven) driver for the Omnipay PHP payment processing library",
+    "description": "Icici driver for the Omnipay PHP payment processing library",
     "keywords": [
         "gateway",
         "merchant",
@@ -13,19 +13,14 @@
     ],
     "homepage": "https://github.com/sinfini/omnipay-icici",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Aman Jain",
-            "email": "amanjain1992@gmail.com"
-        }
-    ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-0": { "Omnipay\\Icici\\" : "src/" }
     },
     "require": {
-        "omnipay/common": "dev-master"
+        "php": ">=5.4"
     },
-    "require-dev": {
-        "omnipay/tests": "dev-master"
+    "suggests" : {
+        "omnipay/common": "~2.0"
     }
 }
