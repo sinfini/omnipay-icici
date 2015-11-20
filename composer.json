@@ -9,7 +9,7 @@
         "pay",
         "payment",
         "purchase",
-        "Icici",
+        "Icici"
     ],
     "homepage": "https://github.com/sinfini/omnipay-icici",
     "license": "MIT",
